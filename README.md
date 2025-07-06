@@ -131,3 +131,12 @@ make apply ENV=prod
 # 本番環境のリソースの削除
 make destroy ENV=prod
 ```
+
+## discourseの画面イメージ
+
+QAサイトのWEBアプリケーションです。
+![1000001038](https://github.com/user-attachments/assets/228101f7-1bd5-4c0f-be8a-385e2ae09479)
+![1000001039](https://github.com/user-attachments/assets/788eb99d-1dc0-427c-8b4f-f3ee8987c043)
+
+
+
