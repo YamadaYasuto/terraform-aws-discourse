@@ -17,7 +17,7 @@ VPC、EC2、RDS、ALB、CloudFrontといった主要なAWSサービスをモジ�
 ```
 .
 ├── Makefile          # コマンドを簡略化するMakefile
-├── envs              # 環境ごとの設定ディレクトリ
+├── envs              # 環境をディレクトリで分離
 │   ├── prod          # 本番環境用
 │   └── stg           # ステージング環境用
 └── modules           # 再利用可能なTerraformモジュール群
@@ -73,7 +73,7 @@ Terraformを実行する前に、以下の準備が必要です。
 
 ### ステップ1: リポジトリのクローンと移動
 ```
-git clone https://github.com/YamadaYasuto/IaC-redmine.git
+git clone ${REPO_URL}
 ```
 
 ### ステップ2: Terraform設定ファイルの編集
@@ -96,8 +96,7 @@ git clone https://github.com/YamadaYasuto/IaC-redmine.git
 `ENV`変数を指定しない場合、デフォルトで`stg`環境が対象となります。
 
 ```
-# プロジェクトルートへ移動
-cd IaC-redmine
+# プロジェクトルートで以下を実行する
 
 # 初期化
 make init
@@ -116,8 +115,7 @@ make destroy
 `prod`環境を対象にするには、各コマンドの末尾に `ENV=prod` を追加します。これにより、`envs/prod`ディレクトリを参照してTerraformが実行されます。
 
 ```
-# プロジェクトルートへ移動
-cd IaC-redmine
+# プロジェクトルートで以下を実行する
 
 # 本番環境の初期化
 make init ENV=prod
