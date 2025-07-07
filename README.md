@@ -11,7 +11,7 @@ VPC、EC2、RDS、ALB、CloudFrontといった主要なAWSサービスをモジ�
 
 ## アーキテクチャ図
 
-![terraform_discourse drawio](https://github.com/user-attachments/assets/f3502815-361c-4217-b3c7-d024b75fc570)
+### ![discourse_aws](https://github.com/user-attachments/assets/b871ca8a-c0e0-4f8c-9ac7-be3aea666e76)
 
 ##  ディレクトリ構成
 ```
@@ -76,7 +76,7 @@ Terraformを実行する前に、以下の準備が必要です。
 git clone ${REPO_URL}
 ```
 
-### ステップ2: Terraform設定ファイルの編集
+ステップ2: Terraform設定ファイルの編集
 #### バックエンド設定の更新 (envs/stg/backend.tf)
 `bucket`の値を、前提条件で作成したS3バケット名に書き換えます。
 
